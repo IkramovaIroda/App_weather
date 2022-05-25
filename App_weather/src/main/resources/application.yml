@@ -1,0 +1,34 @@
+server:
+  port: 80
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: f104cc41ab8669df7d56
+            clientSecret: b072034a4aa747116d5e1dce081096535acb3de6
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/app_weather
+    password: root
+    username: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  main:
+    lazy-initialization: true
+  mvc:
+    servlet:
+      path: /api
+  jackson:
+    date-format: yyyy-MM-dd
+jwt:
+  secretKey: SupperKey
+  expireTime: 864000000
+

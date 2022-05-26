@@ -11,7 +11,6 @@ import java.sql.Timestamp;
 @Data
 public class TaskDto {
     private String name, description;
-    //    private Long userFrom;
     private Long userId;
     private Timestamp dueDate;
 }

@@ -25,10 +25,6 @@ public class Company extends AbsEntity {
     private Long id;
     private String name;
 
-    //company qo'shilganda userniyam avtomatik save qilish PERSIST
-    //company delete userniyam avtomatik delete qilish REMOVE
-    //company edit userniyam avtomatik edit qilish MERGE
-    //company crud userniyam avtomatik crud qilish ALL
 //    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
 //    @OneToOne(cascade = CascadeType.ALL)
     @OneToOne(cascade = CascadeType.ALL)

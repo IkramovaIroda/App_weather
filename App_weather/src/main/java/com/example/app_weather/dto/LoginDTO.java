@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 public class LoginDTO {
     //    @NotEmpty  //
 //    @NotBlank //
-//    @Email(regexp = "(.+)@gmail\\.com$", message = "Email emas!") //sabr tilayman gmail.com tekshirildi
+//    @Email(regexp = "(.+)@gmail\\.com$", message = "Email emas!")
 //    @Email
     //String lar un
 

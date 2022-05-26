@@ -41,7 +41,7 @@ public class JwtProvider {
                 .parseClaimsJws(token)
                 .getBody()
                 .getExpiration()
-                .after(new Date()); //true 5-aprel 1-apreldan keyinmi?
+                .after(new Date());
     }
 
     public boolean validateToken(String token) {

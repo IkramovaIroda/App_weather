@@ -34,10 +34,10 @@ public class AuthController {
         String token = jwtProvider.generateToken(loginDTO.getName());
 
 //        SimpleMailMessage message = new SimpleMailMessage();
-//        message.setText("Salom do'st");
-//        message.setSubject("Title bu akasi!");
+//        message.setText("Assalomu aleykum");
+//        message.setSubject("Title bu !");
 //        message.setSentDate(new Date());
-//        message.setTo("jafarbek1997@gmail.com");
+//        message.setTo("irodaikramovaa@gmail.com");
 //        message.setFrom("pdp.uz@gmail.com");
 //
 //        JavaMailSender mailSender = emailConfig.send();
@@ -49,7 +49,7 @@ public class AuthController {
 
 
 
-    //400 xatolik bo'lganda  aynan shu(MethodArgumentNotValidException) toifali xatolikni ushlaydi
+    //400
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {

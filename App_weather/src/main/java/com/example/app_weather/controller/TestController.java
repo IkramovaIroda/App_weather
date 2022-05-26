@@ -24,7 +24,7 @@ public class TestController {
     @PostMapping("/add")
     public ResponseEntity saveTest() {
 //        String token = request.getHeader("Authorization");
-//        token = token.substring(7); //Bearer so'zini qirqib oldik
+//        token = token.substring(7);
 //        if (jwtProvider.validateToken(token)) {
 //            if (jwtProvider.expireToken(token)) {
 //                String usernameFromToken = jwtProvider.getUsernameFromToken(token);

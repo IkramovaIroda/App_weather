@@ -23,7 +23,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
-    //field metod
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
@@ -44,7 +44,7 @@ public class DataLoader implements CommandLineRunner {
             roleList.add(userRole);
             roleList.add(adminRole);
 
-            User Iroda = userRepository.save(new User("Abdumajid", passwordEncoder.encode("1234"), roleList));
+            User Iroda = userRepository.save(new User("Iroda", passwordEncoder.encode("1234"), roleList));
             companyRepository.save(new Company(1l, "PDP", Iroda));
         }
     }

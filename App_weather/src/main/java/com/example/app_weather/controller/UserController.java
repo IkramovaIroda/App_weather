@@ -24,7 +24,7 @@ public class UserController {
     public ResponseEntity getAll() {
         return ResponseEntity.ok().body(userRepository.findAll());
     }
-
+    @PreAuthorize("hasAnyAuthority('EMPLOYEE_CRUD', 'EMPLOYEE_EDIT')")
     @GetMapping("/{id}")
     public ResponseEntity getOne(@PathVariable Long id) {
         Optional<User> byId = userRepository.findById(id);
@@ -32,7 +32,7 @@ public class UserController {
                 HttpStatus.NOT_FOUND : HttpStatus.OK).body(byId.orElse(new User()));
     }
 
-
+    @PreAuthorize("hasAnyAuthority('EMPLOYEE_CRUD', 'EMPLOYEE_DELETE')")
     @DeleteMapping("{id}")
     public ResponseEntity delete(@PathVariable Long id) {
         Optional<User> user = userRepository.findById(id);
@@ -42,13 +42,13 @@ public class UserController {
         userRepository.delete(user.get());
         return ResponseEntity.ok().body("Deleted");
     }
-
+    @PreAuthorize("hasAnyAuthority('EMPLOYEE_CRUD', 'EMPLOYEE_ADD')")
     @PostMapping("add")
     public ResponseEntity add(@RequestBody UserDTO dto) {
         ApiResponse add = userService.add(dto);
         return ResponseEntity.ok().body(add);
     }
-
+    @PreAuthorize("hasAnyAuthority('EMPLOYEE_CRUD', 'EMPLOYEE_EDIT')")
     @PutMapping("/{id}")
     public ResponseEntity edit(@PathVariable Integer id, @RequestBody UserDTO dto) {
         ApiResponse response = userService.edit(id, dto);

@@ -12,17 +12,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Data
 public class LoginDTO {
-    //    @NotEmpty  //
-//    @NotBlank //
-//    @Email(regexp = "(.+)@gmail\\.com$", message = "Email emas!")
-//    @Email
-    //String lar un
 
     private String name;
-
-
-    //field berilmasayam bo'sh berilsayam ishladi
-
-//    @Pattern(regexp = "\\+998[0-9]{2}", message = "Topolmadim!")
     private String password;
 }

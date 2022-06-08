@@ -19,7 +19,7 @@ public class Turniket {
     @OneToOne
     private User user;
 
-    //    @CreationTimestamp
+
     private Date createDate = new Date();
 
     @CreationTimestamp

@@ -25,18 +25,8 @@ public class User implements UserDetails {
     private String username, password, email;
 
     @ManyToMany(fetch = FetchType.EAGER)
-//    @ManyToMany
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+   // @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roleList; //user_roleList
-
-//    @Temporal(TemporalType.DATE)
-//    @JsonFormat(pattern = "yyyy-MM-dd")
-//    @JsonIgnore
-//    private Date birthDate = new Date();
-
-//    @Transient //bazada column ochilmaydi frontga qaytaradi
-////    private int age = LocalDate.now().getYear() -birthDate.getYear();
-//    private Period age = Period.between(LocalDate.of(birthDate.getYear(), birthDate.getMonth(), birthDate.getDay()), LocalDate.now());
 
     private boolean accountNonExpired = true;
     private boolean accountNonLocked = true;

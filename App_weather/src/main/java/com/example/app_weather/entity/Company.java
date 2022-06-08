@@ -17,16 +17,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @EntityListeners(AuditingEntityListener.class)
-//@Where(clause = "active=true")
-//@JsonIgnoreProperties(value = {"id,name"})
+
 public class Company extends AbsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-//    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
-//    @OneToOne(cascade = CascadeType.ALL)
     @OneToOne(cascade = CascadeType.ALL)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User director;

@@ -13,7 +13,6 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Data
 public class CompanyDto {
-//    @Min(value = 3)
     @NotBlank
     private String name;
     @NotNull

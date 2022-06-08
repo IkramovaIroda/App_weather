@@ -27,6 +27,6 @@ public class Salary {
     private Timestamp dueDate;
 
     @Enumerated(EnumType.STRING)
-    private Month month; //java time Api enum
+    private Month month;
 
 }

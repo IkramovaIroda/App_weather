@@ -1,26 +1,19 @@
 server:
-  port: 80
+  port: 1313
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            clientId: f104cc41ab8669df7d56
-            clientSecret: b072034a4aa747116d5e1dce081096535acb3de6
+  sql:
+   init:
+    mode: always
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/app_weather
+    url: jdbc:postgresql://localhost:5432/postgres
     password: root
     username: postgres
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     defer-datasource-initialization: true
-  sql:
-    init:
-      mode: always
   main:
     lazy-initialization: true
   mvc:

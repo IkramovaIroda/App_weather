@@ -1,4 +1,4 @@
-package com.example.app_weather.dto;
+package com.example.app_weather.dto.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UrlDto {
-    private String lon;
-    private String lat;
+public class weather {
+    private int id;
+    private String description;
+    private String main;
+    private String icon;
 }

@@ -44,7 +44,7 @@ public class DataLoader implements CommandLineRunner {
             roleList.add(userRole);
             roleList.add(adminRole);
 
-            User Iroda = userRepository.save(new User("Shaxzoda", passwordEncoder.encode("1234"), roleList));
+            User Iroda = userRepository.save(new User("kamola", passwordEncoder.encode("1234"), roleList));
             companyRepository.save(new Company(1l, "PDP", Iroda));
         }
     }
